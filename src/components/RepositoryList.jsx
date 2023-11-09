@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Octokit } from "@octokit/core";
-import { token as authToken } from '../../authToken';
+import { token as authToken } from '../authToken';
 
 const RepositoryList = ( {text} ) => {
   const username = 'burnettemk'
@@ -17,8 +17,19 @@ const RepositoryList = ( {text} ) => {
       username: username,
       headers: {
       'X-GitHub-Api-Version': '2022-11-28'
-      },
+      }
     }).then(res => setData(res.data))
+
+    const repoDetailsResponse = octokit.request(`GET /repos/{owner}/{repo}/languages`, {
+      owner: username,
+      repo: 'fire-film',
+      headers: {
+        'X-GitHub-Api-Version': '2022-11-28'
+      }
+    }).then((res) => {
+      console.log(res)
+      console.log(res.data)
+    })
   }, []);
 
   return (
