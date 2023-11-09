@@ -1,18 +1,12 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
+import RepositoryList from './components/RepositoryList'
 // import './App.css'
 
 function App() {
   return (
     <>
-      <div className="primary" >Hello World</div>
-      <ul className="list-group">
-        <li className="list-group-item">An item</li>
-        <li className="list-group-item">A second item</li>
-        <li className="list-group-item">A third item</li>
-        <li className="list-group-item">A fourth item</li>
-        <li className="list-group-item">And a fifth one</li>
-      </ul>
+      <RepositoryList text={'My repositories'}/>
     </>
   )
 }
