@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Octokit } from "@octokit/core";
-import { token as authToken } from '../authToken';
 
 const RepositoryList = ( {text} ) => {
   const username = 'burnettemk'
@@ -10,7 +9,7 @@ const RepositoryList = ( {text} ) => {
     // Octokit.js
     // https://github.com/octokit/core.js#readme
     const octokit = new Octokit({
-      auth: authToken
+      auth: import.meta.env.githubAuthToken
     })
     
     const response = octokit.request(`GET /users/${username}/repos`, {
