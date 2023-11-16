@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,5 +65,81 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+} */
+
+/* .document is for body selector because bootstrap overrides this style */
+/* main overrides the bootstrap style by importing index.css (i think) */
+body {
+  background: #13293d;
+  color: white;
+  text-align: center;
+}
+
+section {
+  background-color: #048BA8;
+  border-radius: 20px;
+  min-height: 30em;
+  height: fit-content;
+}
+
+section span {
+  font-weight: 700;
+}
+
+section ul {
+  list-style: none;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+section li {
+  text-align: left;
+}
+
+/* Specific styles */
+
+.text {
+  color: var(--bs-purple);
+  background: #000;
+  text-align: left;
+}
+
+/* React or Vite allows for index.html to override bootstrap styles */
+.list-group-item {
+  background-color: transparent;
+}
+
+.projects p {
+  padding: 2px 15px;
+}
+
+.progress {
+  /* padding: 5px 10px 5px 0px; */
+  margin-right: 15px;
+  margin-top: 2px;
+  height: 12px;
+}
+
+/* -------------Responsive Styles------------ */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.75fr 1fr;
+  gap: 10px;
+  /* overflow: hidden; */
+  /* border-radius: 1em; */
+}
+
+@media screen and (max-width: 425px) {
+  .grid {
+    display: block;
+  }
+
+  .languages {
+    display: none;
+  }
+
+  .programs {
+    display: none;
   }
 }
