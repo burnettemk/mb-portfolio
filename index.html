@@ -5,68 +5,69 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
-    <link rel="stylesheet" href="src/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="document">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <h1>
-      Mark Burnette
-    </h1>
-    <h2>
-      Front End Developer
-    </h2>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <h1>Mark Burnette</h1>
+    <h2>Front End Developer</h2>
     <div class="grid">
       <section class="languages" id="languages-section">
         <span>Languages</span>
       </section>
       <section class="projects">
-        Projects
-        <h5>
-          Password Generator
-        </h5>
+        <span>Projects</span>
+        <h5>Password Generator</h5>
         <p>Password generator made in python</p>
-        <ul></ul>
-        <h5>
-          Unix Shell Program
-        </h5>
+        <div id="password-generator"></div>
+        <div class="divider"></div>
+        <h5>Unix Shell Program</h5>
         <p>Shell program made for a unix-based operating system in C</p>
-        <ul></ul>
-        <h5>
-          Movie Discovery App
-        </h5>
+        <div id="shell-program"></div>
+        <div class="divider"></div>
+        <h5>Movie Discovery App</h5>
         <p>A movie/tv discovery app built with React + Typescript</p>
-        <ul></ul>
-        <h5>
-          Game Discovery App
-        </h5>
+        <div id="fire-film"></div>
+        <div class="divider"></div>
+        <h5>Game Discovery App</h5>
         <p>A game discovery app built with React + Typescript</p>
-        <ul></ul>
-        <h5>
-          Personal Workstation
-        </h5>
-        <p>A personal system to reduce distractions while working
-           built with python to run in a shell environment</p>
-        <ul></ul>
+        <div id="game-hub"></div>
+        <div class="divider"></div>
+        <h5>Personal Workstation</h5>
+        <p>
+          A personal system to reduce distractions while working built with
+          python to run in a shell environment
+        </p>
+        <div id="guided-workflow"></div>
+        <div class="divider"></div>
+        <h5>Portfolio</h5>
+        <p>This very site you are viewing</p>
+        <div id="mb-portfolio"></div>
       </section>
-      <section class="programs">
-        Programs & Tools
-        <ul>
-          <li>Github</li>
-          <li>Visual Studio Code</li>
-          <li>Pycharm</li>
-          <li>Visual Studio</li>
-          <li>Git</li>
-          <li>React</li>
-          <li>Vite</li>
-          <li>Vercel</li>
-          <li>Chakra UI</li>
-          <li>Bootstrap</li>
-        </ul>
+      <section class="tools" id="tools-section">
+        <span>Programs & Tools</span>
       </section>
     </div>
   </body>

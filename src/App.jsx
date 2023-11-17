@@ -1,15 +1,15 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-import RepositoryList from './components/RepositoryList'
-import LanguageList from './components/LanguageList'
-// import './App.css'
+import LanguageList from "./components/LanguageList";
+import LanguageToolList from "./components/LanguageToolList";
+import ToolList from "./components/ToolList";
 
 function App() {
   return (
     <>
       <LanguageList />
+      <ToolList />
+      <LanguageToolList />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
