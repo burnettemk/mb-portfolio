@@ -1,4 +1,5 @@
 import React from "react";
+import projects from "../data/projects";
 import { createPortal } from "react-dom";
 import {
   SiBootstrap,
@@ -11,13 +12,48 @@ import {
   SiReact,
   SiTypescript,
   SiVisualstudiocode,
+  SiVercel,
+  SiPycharm,
+  SiAssemblyscript,
+  SiCplusplus,
+  SiCss3,
+  SiCsharp,
+  SiC,
 } from "react-icons/si";
 
+function getIcon(name) {
+  switch (name) {
+    case "Bootstrap":
+      return <SiBootstrap />;
+    case "Chakraui":
+      return <SiChakraui />;
+    case "Git":
+      return <SiGit />;
+    case "Github":
+      return <SiGithub />;
+    case "Gnu":
+      return <SiGnu />;
+    case "Pycharm":
+      return <SiPycharm />;
+    case "React":
+      return <SiReact />;
+    case "Vercel":
+      return <SiVercel />;
+    case "VisualstudioCode":
+      return <SiVisualstudiocode />;
+    default:
+      return null;
+  }
+}
+
 const LanguageToolList = () => {
+  console.log(projects);
+
   return (
     <>
       {createPortal(
         <ul>
+          {projects[4].tools.map((tool) => getIcon(tool))}
           <SiPython />
           <SiGithub />
           <SiGit />

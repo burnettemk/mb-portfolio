@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Fire Film",
+    "desc": "A movie/tv discovery app built with React + Typescript",
+    "tools": ["Github", "Git", "React", "Visualstudiocode", "Chakraui"],
+    "langs": ["Typescript", "CSS"],
+    "type": "webdev"
+  },
+  {
+    "name": "Game Hub",
+    "desc": "A game discovery app built with React + Typescript",
+    "tools": ["Github", "Git", "React", "Visualstudiocode", "Chakraui"],
+    "langs": ["Typescript", "CSS"],
+    "type": "webdev"
+  },
+  {
+    "name": "Mark Burnette Portfolio",
+    "desc": "This portfolio site created to display my finished web development projects to anyone interested. Created using Javascript and React",
+    "tools": ["Github", "Git", "React", "Visualstudiocode", "Bootstrap"],
+    "langs": ["Javascript", "CSS, HTML"],
+    "type": "webdev"
+  },
+  {
+    "name": "Book Releases Api",
+    "desc": "An api I made using ExpressJS that gets a list of newly released books from different websites",
+    "tools": [
+      "NodeJS",
+      "ExpressJS",
+      "Vercel",
+      "Github",
+      "Git",
+      "Visualstudiocode"
+    ],
+    "langs": ["Javascript"],
+    "type": "api"
+  },
+  {
+    "name": "Password Generator",
+    "desc": "Password generator made in python",
+    "tools": ["Pycharm", "Github", "Git"],
+    "langs": ["Python"],
+    "type": "app"
+  },
+  {
+    "name": "UNIX Shell Program",
+    "desc": "Shell program made for a unix-based operating system in C",
+    "tools": ["Gnu"],
+    "langs": ["C"],
+    "type": "shell"
+  },
+  {
+    "name": "Personal Workstation",
+    "desc": "A personal system to reduce distractions while working built with python to run in a shell environment",
+    "tools": ["Github", "Git", "Visualstudiocode"],
+    "langs": ["Python"],
+    "type": "app"
+  }
+]
