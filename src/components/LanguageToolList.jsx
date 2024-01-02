@@ -1,115 +1,80 @@
 import React from "react";
-import projects from "../data/projects";
 import { createPortal } from "react-dom";
 import {
+  SiAssemblyscript,
   SiBootstrap,
+  SiC,
   SiChakraui,
+  SiCplusplus,
+  SiCsharp,
+  SiCss3,
   SiGit,
   SiGithub,
   SiGnu,
+  SiHtml5,
   SiJavascript,
+  SiPycharm,
   SiPython,
   SiReact,
   SiTypescript,
-  SiVisualstudiocode,
   SiVercel,
-  SiPycharm,
-  SiAssemblyscript,
-  SiCplusplus,
-  SiCss3,
-  SiCsharp,
-  SiC,
+  SiVisualstudiocode,
 } from "react-icons/si";
+import projects from "../data/projects";
+import IconJS from "./icons/IconJS";
 
 function getIcon(name) {
   switch (name) {
+    case "Assembly":
+      return <SiAssemblyscript key={name} />;
     case "Bootstrap":
-      return <SiBootstrap />;
+      return <SiBootstrap key={name} />;
+    case "C":
+      return <SiC key={name} />;
     case "Chakraui":
-      return <SiChakraui />;
+      return <SiChakraui key={name} />;
+    case "C++":
+      return <SiCplusplus key={name} />;
+    case "C#":
+      return <SiCsharp key={name} />;
+    case "CSS":
+      return <SiCss3 key={name} />;
     case "Git":
-      return <SiGit />;
+      return <SiGit key={name} />;
     case "Github":
-      return <SiGithub />;
+      return <SiGithub key={name} />;
     case "Gnu":
-      return <SiGnu />;
+      return <SiGnu key={name} />;
+    case "HTML":
+      return <SiHtml5 key={name} />;
+    case "Javascript":
+      return <IconJS name={name} />;
     case "Pycharm":
-      return <SiPycharm />;
+      return <SiPycharm key={name} />;
+    case "Python":
+      return <SiPython key={name} />;
     case "React":
-      return <SiReact />;
+      return <SiReact key={name} />;
+    case "Typescript":
+      return <SiTypescript key={name} />;
     case "Vercel":
-      return <SiVercel />;
+      return <SiVercel key={name} />;
     case "VisualstudioCode":
-      return <SiVisualstudiocode />;
+      return <SiVisualstudiocode key={name} />;
     default:
       return null;
   }
 }
 
 const LanguageToolList = () => {
-  console.log(projects);
-
-  return (
-    <>
-      {createPortal(
-        <ul>
-          {projects[4].tools.map((tool) => getIcon(tool))}
-          <SiPython />
-          <SiGithub />
-          <SiGit />
-          <SiVisualstudiocode />
-        </ul>,
-        document.getElementById("password-generator")
-      )}
-      {createPortal(
-        <ul>
-          C <SiGnu />
-        </ul>,
-        document.getElementById("shell-program")
-      )}
-      {createPortal(
-        <ul>
-          <SiTypescript />
-          <SiGithub />
-          <SiGit />
-          <SiReact />
-          <SiVisualstudiocode />
-          <SiChakraui />
-        </ul>,
-        document.getElementById("fire-film")
-      )}
-      {createPortal(
-        <ul>
-          <SiTypescript />
-          <SiGithub />
-          <SiGit />
-          <SiReact />
-          <SiVisualstudiocode />
-          <SiChakraui />
-        </ul>,
-        document.getElementById("game-hub")
-      )}
-      {createPortal(
-        <ul>
-          <SiPython />
-          <SiGithub />
-          <SiGit />
-          <SiVisualstudiocode />
-        </ul>,
-        document.getElementById("guided-workflow")
-      )}
-      {createPortal(
-        <ul>
-          <SiJavascript />
-          <SiGithub />
-          <SiGit />
-          <SiReact />
-          <SiVisualstudiocode />
-          <SiBootstrap />
-        </ul>,
-        document.getElementById("mb-portfolio")
-      )}
-    </>
+  return projects.map((project) =>
+    createPortal(
+      <ul>
+        {project.langs.map((lang) => getIcon(lang))}
+        {project.tools.map((tool) => getIcon(tool))}
+      </ul>,
+      document.getElementById(project.id)
+    )
   );
 };
 
