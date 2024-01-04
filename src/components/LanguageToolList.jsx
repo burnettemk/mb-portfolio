@@ -47,7 +47,7 @@ function getIcon(name) {
     case "HTML":
       return <SiHtml5 key={name} />;
     case "Javascript":
-      return <IconJS name={name} />;
+      return <SiJavascript name={name} />;
     case "Pycharm":
       return <SiPycharm key={name} />;
     case "Python":
