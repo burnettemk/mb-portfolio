@@ -21,7 +21,6 @@ import {
   SiVisualstudiocode,
 } from "react-icons/si";
 import projects from "../data/projects";
-import IconJS from "./icons/IconJS";
 
 function getIcon(name) {
   switch (name) {
