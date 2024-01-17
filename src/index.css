@@ -11,8 +11,13 @@ body::-webkit-scrollbar {
 section {
   background-color: #048ba8;
   border-radius: 20px;
-  min-height: 50%;
-  height: fit-content;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+section::-webkit-scrollbar {
+  display: none;
 }
 
 section span {
@@ -33,6 +38,11 @@ section li {
   text-align: left;
 }
 
+section li:hover,
+section div:hover {
+  background-color: #114f62;
+}
+
 section h5 {
   margin-top: 10px;
 }
@@ -48,14 +58,7 @@ section div ul {
 
 /* Specific styles */
 
-.projects {
-  height: 50%;
-  overflow: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.projects div {
+.projects .project-div {
   border-style: solid;
   border-color: #0c084c;
   border-width: 0px 0px 3px;
@@ -64,12 +67,8 @@ section div ul {
   padding-top: 3px;
 }
 
-.projects div:last-child {
+.projects div:nth-last-child(-n + 1 of div.project-div) {
   border-style: none;
-}
-
-.projects::-webkit-scrollbar {
-  display: none;
 }
 
 .projects p {
@@ -80,6 +79,13 @@ section div ul {
   margin-right: 15px;
   margin-top: 2px;
   height: 12px;
+}
+
+.projects .icon {
+  /* border-radius: 10px; */
+  display: inline-block;
+  padding: 0px 3px 3px;
+  width: fit-content;
 }
 
 .most-exp {
@@ -106,13 +112,18 @@ section div ul {
   text-align: center;
 }
 
+.other {
+  display: none;
+}
+
 /* -------------Responsive Styles------------ */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1.75fr 1fr;
+  padding-top: 40px;
+  margin-bottom: -50px;
+  grid-template-rows: 0.8fr;
   gap: 10px;
-  /* overflow: hidden; */
-  /* border-radius: 1em; */
 }
 
 @media screen and (max-width: 425px) {
