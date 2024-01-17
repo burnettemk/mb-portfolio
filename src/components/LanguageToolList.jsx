@@ -65,10 +65,20 @@ function getIcon(name) {
   }
 }
 
-const LanguageToolList = () => {
+const LanguageToolList = ({ onSelect }) => {
+  // Add onclick handler to parent div
+  projects.forEach((p) => {
+    console.log(
+      document
+        .getElementById(p.id)
+        .parentElement.addEventListener("click", () => onSelect(p.id))
+    );
+  });
+
+  // Insert markup at for icon list in id'd div
   return projects.map((project) =>
     createPortal(
-      <ul>
+      <ul onClick={() => console.log(project.name + " selected")}>
         {project.langs.map((lang) => getIcon(lang))}
         {project.tools.map((tool) => getIcon(tool))}
       </ul>,
